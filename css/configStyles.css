@@ -1,0 +1,185 @@
+.COLORS {
+    --c0: #e53935;
+    --c1: #8e24aa;
+    --c2: #1e88e5;
+    --c3: #00897b;
+    --c4: #f4511e;
+    --c5: #6d4c41;
+}
+
+.container {
+    max-width: 640px;
+}
+
+.info-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.5rem;
+    font-size: 0.83rem;
+    margin-bottom: 1.5rem;
+}
+.info-grid dt {
+    color: #999;
+}
+.info-grid dd {
+    color: #222;
+    margin-left: 0.2rem;
+}
+
+.weight-bar {
+    display: flex;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    gap: 2px;
+    margin-bottom: 0.4rem;
+}
+.weight-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.77rem;
+    margin-bottom: 1.25rem;
+}
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    display: inline-block;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+}
+.weight-error {
+    font-size: 0.8rem;
+    color: #c00;
+    margin-bottom: 0.75rem;
+    display: none;
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.filters-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #666;
+}
+.btn-add {
+    font-size: 0.82rem;
+    padding: 0.25rem 0.65rem;
+    background: #2e5090;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-add:hover {
+    background: #1e3a6e;
+}
+
+.filter-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px 30px;
+    gap: 0.5rem;
+    align-items: end;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-left: 3px solid #ccc;
+    border-radius: 4px;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 0.4rem;
+}
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+.field-group label {
+    font-size: 0.67rem;
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.field-group select,
+.field-group input {
+    padding: 0.35rem 0.45rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    width: 100%;
+}
+.field-group select:focus,
+.field-group input:focus {
+    outline: none;
+    border-color: #2e5090;
+}
+
+.weight-wrap {
+    position: relative;
+}
+.weight-wrap input {
+    padding-right: 1.5rem;
+}
+.weight-pct {
+    position: absolute;
+    right: 0.4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: #bbb;
+    pointer-events: none;
+}
+
+.btn-remove {
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #bbb;
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+}
+.btn-remove:hover {
+    color: #c00;
+    border-color: #c00;
+}
+
+.empty-filters {
+    font-size: 0.85rem;
+    color: #bbb;
+    padding: 1.5rem 0;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.btn-save {
+    padding: 0.5rem 1.5rem;
+    background: #2e5090;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.btn-save:hover {
+    background: #1e3a6e;
+}
+.btn-save:disabled {
+    background: #bbb;
+    cursor: not-allowed;
+}
+.save-status {
+    font-size: 0.82rem;
+}
+.save-status.ok {
+    color: #2e7d32;
+}
+.save-status.error {
+    color: #c00;
+}

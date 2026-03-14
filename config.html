@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Filter Config, Reconciliation Service</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/uiStyles.css" />
+        <link rel="stylesheet" href="/css/configStyles.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="brand">Reconcile</div>
+            <a href="/ui">Search</a>
+            <a href="/config-ui" class="active">Filter Config</a>
+            <a href="/" target="_blank">API Manifest</a>
+            <span class="nav-footer">v0.2</span>
+        </nav>
+
+        <div class="page">
+            <div class="container">
+                <h1>Filter Configuration</h1>
+
+                <dl class="info-grid" id="datasetInfo"><dt>Loading...</dt></dl>
+
+                <div class="weight-bar" id="weightBar"></div>
+                <div class="weight-legend" id="weightLegend"></div>
+                <div class="weight-error" id="weightError">
+                    Filter weights sum to 1.0 or more. Reduce them to leave room for name matching.
+                </div>
+
+                <div class="filters-header">
+                    <span class="filters-label">Filter Fields</span>
+                    <button class="btn-add" onclick="addRow()">+ Add Filter</button>
+                </div>
+
+                <div id="filterList"></div>
+
+                <div class="actions">
+                    <button class="btn-save" id="saveBtn" onclick="saveConfig()">Save &amp; Apply</button>
+                    <span class="save-status" id="saveStatus"></span>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/config.js"></script>
+    </body>
+</html>

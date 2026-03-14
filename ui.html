@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Search, Reconciliation Service</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/uiStyles.css" />
+    </head>
+    <body>
+        <nav>
+            <div class="brand">Reconcile</div>
+            <a href="/ui" class="active">Search</a>
+            <a href="/config-ui">Filter Config</a>
+            <a href="/" target="_blank">API Manifest</a>
+            <span class="nav-footer">v0.2</span>
+        </nav>
+
+        <div class="content">
+            <div class="main">
+                <h1>Search</h1>
+
+                <div class="search-row">
+                    <input type="text" id="queryInput" placeholder="e.g. Galapagos Islands" />
+                    <button onclick="doSearch()">Search</button>
+                </div>
+
+                <div class="filters">
+                    <label
+                        >Limit:
+                        <select id="limitSelect">
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                        </select>
+                    </label>
+                    <div id="filterInputs" style="display: contents"></div>
+                </div>
+
+                <div class="status" id="status"></div>
+                <div id="results"><div class="empty">Enter a query above to search.</div></div>
+            </div>
+
+            <div class="detail-panel" id="detailPanel">
+                <div class="detail-inner" id="detailInner"></div>
+            </div>
+        </div>
+
+        <script src="/js/ui.js"></script>
+    </body>
+</html>
